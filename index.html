@@ -1,0 +1,574 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="fr" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="fr" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="fr" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="fr" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="fr"> <!--<![endif]-->
+<head>
+    <title>Livre interactif</title>
+    <meta name="viewport" content="width = 1050, user-scalable = no" />
+    <script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="extras/jquery-ui.min.js"></script> 
+    <script type="text/javascript" src="extras/jquery-ui-1.8.20.custom.min.js"></script>
+    <script type="text/javascript" src="extras/modernizr.2.5.3.min.js"></script>
+    <script type="text/javascript" src="lib/hash.js"></script>
+    <meta charset="utf-8">
+    <script>
+        $(function() {
+            $('#toggle-summary').click(function() {
+                 // Set the effect type
+                var effect = 'slide';
+                // Set the options for the effect type chosen
+                var options = { 
+                    direction: 'right' 
+                };
+                // Set the duration (default: 400 milliseconds)
+                var duration = 500;
+                $('.toggle').toggle(effect, options, duration);
+                
+                
+                //COLOR BUTTON ACTIVE
+                $(this).toggleClass('active-toggle');
+                
+                
+            });
+        });
+    </script>
+    
+</head>
+<body>
+
+<div id="canvas">
+    <div class='header'>
+        <!-- TITLE DOC -->
+        <h2>LA BRESSE INFOS - N°322 - MAI 2015</h2>
+       
+        <!-- TOGGLE SUMMARY -->
+        <div id='toggle-summary'></div>
+        
+        <!-- PDF VIEWVER -->
+        <a href='pages/LaBresseInfosN322.pdf' target="_blank">
+            <div id='pdf-view'></div>
+        </a>
+        
+        <!-- PDF DOWNLOAD -->
+        <a href='pages/LaBresseInfosN322.pdf' download='PDF'>
+            <div id='pdf-download'></div>
+        </a>
+        
+
+        <!-- OTHERS BUTTONS -->
+        <div class="zoom-icon zoom-icon-in"></div>
+        <div ignore="1" class="previous-button previous-icon"></div>
+        <div ignore="1" class="next-button next-icon"></div>
+    </div>
+
+     <!-- TOGGLE SUMMARY -->
+    <div class='toggle summary'>
+        <div class='section'>
+            <h4 class="page-1">COUVERTURE</h4>
+        </div>
+        
+        <div class='section'>
+            <h4 class="page-2">ZOOM</h4>
+            <ul>
+                <li class="page-2">Programme du 24e festival de sculpture Camille Claudel</li>
+            </ul>
+        </div>
+        
+        <div class='section'>
+            <h4 class="page-3">EDITORIAL</h4>
+        </div>
+        
+        <div class='section'>
+            <h4 class='page-4'>CONSEIL MUNICIPAL</h4>
+            <ul>
+                <li class="page-4">Finances</li>
+                <li class="page-4">Marchés publics</li>
+                <li class="page-5">Ressources humaines</li>
+                <li class="page-5">Forêts – patrimoine</li>
+                <li class="page-5">Urbanisme – terrains</li>
+                <li class="page-5">Réseau public eau</li>
+                <li class="page-5">Bilan des cessions de terrains, en 2014</li>
+                <li class="page-5">Tourisme</li>
+                <li class="page-5">Intercommunalité</li>
+            </ul>
+        </div>
+        
+        <div class='section'>
+            <h4 class='page-6'>ACTUALITES</h4>
+            <ul>
+                <li class="page-6">Vos rendez-vous à la Maison de La Bresse</li>
+                <li class="page-7">Père Pedro en visite à La Bresse</li>
+                <li class="page-7">Saint-Laurent</li>
+                <li class="page-7">Opération Bol de riz</li>
+                <li class="page-8">Des nouveautés chez vos commerçants</li>
+                <li class="page-8">Visites et inscriptions à l’école maternelle « La Tourterelle »</li>
+                <li class="page-8">Du nouveau sur les factures de la Régie Municipale d’Électricité</li>
+                <li class="page-8">Accueil des nouveaux habitants</li>
+                <li class="page-8">Marchés publics 2014</li>
+            </ul>
+        </div>
+        
+        <div class='section'>
+            <h4 class='page-9'>LE DOSSIER : LE BUDGET</h4>
+            <ul>
+                <li class="page-9">Éditorial</li>
+                <li class="page-10">2014 en bref</li>
+                <li class="page-11">Autres principaux résultats 2014</li>
+                <li class="page-12">Le budget primitive 2015</li>
+                <li class="page-12">Les Impôts locaux 2015</li>
+            </ul>
+        </div>
+        
+        <div class='section'>
+            <h4 class='page-14'>MLC</h4>
+            <ul>
+                <li class="page-14">FIVAL 2015</li>
+                <li class="page-15">Préprogramme été 2015</li>
+                <li class="page-15">MLC-CINEMA GRAND ÉCRAN : Programme cinéma à partir du 06 mai</li>
+            </ul>
+        </div>
+        
+        <div class='section'>
+            <h4 class='page-16'>OFFICE DE TOURISME ET LOISIRS</h4>
+            <ul>
+                <li class="page-16">Deux nouveaux visages à l’Office de Tourisme</li>
+                <li class="page-17">Un gîte bressaud, décor d’une émission de télé</li>
+                <li class="page-17">Aquagym 4e âge</li>
+            </ul>
+        </div>
+        
+        <div class='section'>
+            <h4 class='page-18'>TRIBUNE</h4>
+            <ul>
+                <li class="page-18">Article du Groupe Majoritaire</li>
+                <li class="page-18">Article du Groupe Minoritaire</li>
+            </ul>
+        </div>
+        
+        <div class='section'>
+            <h4 class='page-19'>DANS LE RETRO</h4>
+            <ul>
+                <li class="page-19">Activités de mars à l’école maternelle « La Tourterelle »</li>
+                <li class="page-19">La Bressaude</li>
+                <li class="page-20">Carnaval de Strasbourg</li>
+                <li class="page-20">Visite du député Bajan à La Bresse</li>
+                <li class="page-20">On ne s’ennuie pas chez les Toujours Jeunes !</li>
+                <li class="page-21">École Saint-Laurent</li>
+                <li class="page-22">14e Forum des Emplois</li>
+                <li class="page-22">État civil</li>
+            </ul>
+        </div>
+        
+        <div class='section'>
+            <h4 class='page-23'>INFOS PRATIQUES</h4>
+        </div>
+        
+        <div class='section'>
+            <h4 class='page-24'>AGENDA</h4>
+        </div>
+    </div>
+
+    <div class="magazine-viewport">
+        <div class="container">
+            <div class="magazine">
+                <!-- Next button -->
+    <!--			<div ignore="1" class="next-button"></div>-->
+                <!-- Previous button -->
+    <!--			<div ignore="1" class="previous-button"></div>-->
+            </div>
+        </div>
+        <div class="bottom">
+            <div id="slider-bar" class="turnjs-slider">
+                <div id="slider"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+function loadApp() {
+
+ 	$('#canvas').fadeIn(1000);
+
+ 	var flipbook = $('.magazine');
+
+ 	// Check if the CSS was already loaded
+	
+	if (flipbook.width()==0 || flipbook.height()==0) {
+		setTimeout(loadApp, 10);
+		return;
+	}
+	
+	// Create the flipbook
+
+	flipbook.turn({
+			
+			// Magazine width
+
+			width: 1020, //922,
+
+			// Magazine height
+
+			height: 700, //600,
+
+			// Duration in millisecond
+
+			duration: 1000,
+
+			// Enables gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: true,
+
+			// Elevation from the edge of the flipbook when turning a page
+
+			elevation: 50,
+
+			// The number of pages
+
+			pages: 24,
+
+			// Events
+
+			when: {
+				turning: function(event, page, view) {
+					
+					var book = $(this),
+					currentPage = book.turn('page'),
+					pages = book.turn('pages');
+			
+					// Update the current URI
+
+					Hash.go('page/' + page).update();
+
+					// Show and hide navigation buttons
+
+					disableControls(page);
+
+				},
+
+				turned: function(event, page, view) {
+
+					disableControls(page);
+
+					$(this).turn('center');
+
+					$('#slider').slider('value', getViewNumber($(this), page));
+
+					if (page==1) { 
+						$(this).turn('peel', 'br');
+					}
+
+				},
+
+				missing: function (event, pages) {
+
+					// Add pages that aren't in the magazine
+
+					for (var i = 0; i < pages.length; i++)
+						addPage(pages[i], $(this));
+
+				}
+			}
+
+	});
+
+	// Zoom.js
+
+	$('.magazine-viewport').zoom({
+		flipbook: $('.magazine'),
+
+		max: function() { 
+			
+			return largeMagazineWidth()/$('.magazine').width();
+
+		}, 
+
+		when: {
+			swipeLeft: function() {
+
+				$(this).zoom('flipbook').turn('next');
+
+			},
+
+			swipeRight: function() {
+				
+				$(this).zoom('flipbook').turn('previous');
+
+			},
+
+			resize: function(event, scale, page, pageElement) {
+
+				if (scale==1)
+					loadSmallPage(page, pageElement);
+				else
+					loadLargePage(page, pageElement);
+
+			},
+
+			zoomIn: function () {
+
+				$('#slider-bar').hide();
+				$('.made').hide();
+				$('.magazine').removeClass('animated').addClass('zoom-in');
+				$('.zoom-icon').removeClass('zoom-icon-in').addClass('zoom-icon-out');
+				
+				if (!window.escTip && !$.isTouch) {
+					escTip = true;
+
+					$('<div />', {'class': 'exit-message'}).
+						html('<div>Press ESC to exit</div>').
+							appendTo($('body')).
+							delay(2000).
+							animate({opacity:0}, 500, function() {
+								$(this).remove();
+							});
+				}
+			},
+
+			zoomOut: function () {
+
+				$('#slider-bar').fadeIn();
+				$('.exit-message').hide();
+				$('.made').fadeIn();
+				$('.zoom-icon').removeClass('zoom-icon-out').addClass('zoom-icon-in');
+
+				setTimeout(function(){
+					$('.magazine').addClass('animated').removeClass('zoom-in');
+					resizeViewport();
+				}, 0);
+
+			}
+		}
+	});
+    
+    
+    // Summary
+    
+    $('.summary').click(function(event) {
+		
+		var page;
+
+		if (event.target && (page=/page-([0-9]+)/.exec($(event.target).attr('class'))) ) {
+		
+			$('.magazine').turn('page', page[1]);
+            //console.log(page);
+            //$('.toggle').toggle('slide', 'up', 500);
+		}
+	});
+    
+    
+    
+
+	// Zoom event
+
+	if ($.isTouch)
+		$('.magazine-viewport').bind('zoom.doubleTap', zoomTo);
+	else
+		$('.magazine-viewport').bind('zoom.tap', zoomTo);
+
+
+	// Using arrow keys to turn the page
+
+	$(document).keydown(function(e){
+
+		var previous = 37, next = 39, esc = 27;
+
+		switch (e.keyCode) {
+			case previous:
+
+				// left arrow
+				$('.magazine').turn('previous');
+				e.preventDefault();
+
+			break;
+			case next:
+
+				//right arrow
+				$('.magazine').turn('next');
+				e.preventDefault();
+
+			break;
+			case esc:
+				
+				$('.magazine-viewport').zoom('zoomOut');	
+				e.preventDefault();
+
+			break;
+		}
+	});
+
+	// URIs - Format #/page/1 
+
+	Hash.on('^page\/([0-9]*)$', {
+		yep: function(path, parts) {
+			var page = parts[1];
+
+			if (page!==undefined) {
+				if ($('.magazine').turn('is'))
+					$('.magazine').turn('page', page);
+			}
+
+		},
+		nop: function(path) {
+
+			if ($('.magazine').turn('is'))
+				$('.magazine').turn('page', 1);
+		}
+	});
+
+
+	$(window).resize(function() {
+		resizeViewport();
+	}).bind('orientationchange', function() {
+		resizeViewport();
+	});
+
+	// Regions
+
+	if ($.isTouch) {
+		$('.magazine').bind('touchstart', regionClick);
+	} else {
+		$('.magazine').click(regionClick);
+	}
+
+	// Events for the next button
+
+	$('.next-button').bind($.mouseEvents.over, function() {
+		
+		$(this).addClass('next-button-hover');
+
+	}).bind($.mouseEvents.out, function() {
+		
+		$(this).removeClass('next-button-hover');
+
+	}).bind($.mouseEvents.down, function() {
+		
+		$(this).addClass('next-button-down');
+
+	}).bind($.mouseEvents.up, function() {
+		
+		$(this).removeClass('next-button-down');
+
+	}).click(function() {
+		
+		$('.magazine').turn('next');
+
+	});
+
+	// Events for the next button
+	
+	$('.previous-button').bind($.mouseEvents.over, function() {
+		
+		$(this).addClass('previous-button-hover');
+
+	}).bind($.mouseEvents.out, function() {
+		
+		$(this).removeClass('previous-button-hover');
+
+	}).bind($.mouseEvents.down, function() {
+		
+		$(this).addClass('previous-button-down');
+
+	}).bind($.mouseEvents.up, function() {
+		
+		$(this).removeClass('previous-button-down');
+
+	}).click(function() {
+		
+		$('.magazine').turn('previous');
+
+	});
+
+
+	// Slider
+
+	$( "#slider" ).slider({
+		min: 1,
+		max: numberOfViews(flipbook),
+
+		start: function(event, ui) {
+
+			if (!window._thumbPreview) {
+				_thumbPreview = $('<div />', {'class': 'thumbnail'}).html('<div></div>');
+				setPreview(ui.value);
+				_thumbPreview.appendTo($(ui.handle));
+			} else
+				setPreview(ui.value);
+
+			moveBar(false);
+
+		},
+
+		slide: function(event, ui) {
+
+			setPreview(ui.value);
+
+		},
+
+		stop: function() {
+
+			if (window._thumbPreview)
+				_thumbPreview.removeClass('show');
+			
+			$('.magazine').turn('page', Math.max(1, $(this).slider('value')*2 - 2));
+
+		}
+	});
+
+	resizeViewport();
+
+	$('.magazine').addClass('animated');
+
+}
+
+// Zoom icon
+
+ $('.zoom-icon').bind('mouseover', function() { 
+ 	
+ 	if ($(this).hasClass('zoom-icon-in'))
+ 		$(this).addClass('zoom-icon-in-hover');
+
+ 	if ($(this).hasClass('zoom-icon-out'))
+ 		$(this).addClass('zoom-icon-out-hover');
+ 
+ }).bind('mouseout', function() { 
+ 	
+ 	 if ($(this).hasClass('zoom-icon-in'))
+ 		$(this).removeClass('zoom-icon-in-hover');
+ 	
+ 	if ($(this).hasClass('zoom-icon-out'))
+ 		$(this).removeClass('zoom-icon-out-hover');
+
+ }).bind('click', function() {
+
+ 	if ($(this).hasClass('zoom-icon-in'))
+ 		$('.magazine-viewport').zoom('zoomIn');
+ 	else if ($(this).hasClass('zoom-icon-out'))	
+		$('.magazine-viewport').zoom('zoomOut');
+
+ });
+
+ $('#canvas').hide();
+
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['lib/turn.min.js'],
+	nope: ['lib/turn.html4.min.js', 'css/jquery.ui.html4.css'],
+	both: ['lib/zoom.min.js', 'css/jquery.ui.css', 'js/magazine.js', 'css/magazine.css', 'css/style.css'],
+	complete: loadApp
+});
+
+</script>
+
+</body>
+</html>

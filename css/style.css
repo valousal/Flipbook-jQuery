@@ -1,0 +1,164 @@
+/*MON STYLE - SURCHAGE CSS DU STYLE PAR DEFAUT*/
+body{
+    font-family:arial;
+}
+
+.magazine-viewport{
+    background-color: rgb(77,77,77);
+}
+
+.previous-icon{
+    position: absolute;
+    z-index: 1000;
+    width: 40px;
+    height: 150px;
+    top:40%;
+    left:40px;
+    background-image: url(../pics/arrow-left.png);
+    background-size: 40px 150px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+.zoom-icon{
+    right:40px;
+}
+
+
+.next-icon{
+   position: absolute;
+    z-index: 1000;
+    width: 40px;
+    height: 150px;
+    top:40%;
+    right:40px;
+    background-image: url(../pics/arrow-right.png);
+    background-size: 40px 150px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+} 
+
+#toggle-summary{
+    position: absolute;
+    z-index: 1200;
+    width: 20px;
+    height: 20px;
+    top:10px;
+    right:10px;
+    background-image: url(../pics/SOMMAIRE.png);
+    background-size: 20px 40px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+#toggle-summary:hover, #pdf-view:hover,#pdf-download:hover{
+    background-position:0px -20px;
+	cursor: pointer;
+}
+
+.active-toggle{
+     background-position:0px -20px;
+    cursor: pointer;
+}
+
+#pdf-view{
+    position: absolute;
+    z-index: 1200;
+    width:20px;
+    height: 20px;
+    top:10px;
+    right:70px;
+    background-image: url(../pics/IMPRIM.png);
+    background-size: 20px 40px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+
+
+#pdf-download{
+    position: absolute;
+    z-index: 1200;
+    width:20px;
+    height: 20px;
+    top:10px;
+    right:100px;
+    background-image: url(../pics/TELECHARGE.png);
+    background-size: 20px 40px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+
+.toggle{
+    display: none;
+    background-color: rgba(0,0,0,0.6);
+    width:280px;
+    height: 90%;
+    padding: 20px 10px 0px 20px;
+    position:absolute;
+    z-index: 1100;
+    right: 0;
+    top:40px;
+    overflow: auto;
+    color:rgb(179,179,179);
+    font-size: 12px;
+    border-top: solid 1px;
+    border-color: rgb(255,255,255);
+    border-bottom-left-radius: 10px;
+}
+
+
+.summary h4{
+    margin: 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.summary h4:hover{
+    cursor: pointer;
+    color: rgb(255,255,255);
+}
+
+.summary .section {
+    margin-bottom: 1.5em;
+}
+
+.summary ul{
+    margin:0;
+    font-size: 14px;
+    margin: 0;
+    padding:0;
+}
+
+.summary ul li{
+    cursor: pointer;
+    list-style-type: none;
+    margin: 0;
+    margin-top: 3px;
+}
+
+.summary ul li:hover{
+    cursor: pointer;
+    color: rgb(255,255,255);
+}
+
+.header {
+    background-color: rgba(0,0,0,0.81);
+    height:40px;
+    color:rgb(179,179,179);
+    border-bottom: solid 1px;
+    border-color: rgb(255,255,255);
+}
+
+.header h2{
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 30px;
+    font-size: 18px;
+}
+
+.bottom{
+    bottom:70px;
+}
+
